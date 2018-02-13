@@ -42,3 +42,7 @@ plt.xlabel('time in milliseconds')
 plt.ylabel('PRICE')
 plt.show()
 plt.savefig('sqPlot.png', bbox_inches='tight')
+
+
+
+#?fsyms=BTC,ETH&tsyms=USD,EUR,PKR
