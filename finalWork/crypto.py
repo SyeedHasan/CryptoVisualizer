@@ -7,8 +7,8 @@ from matplotlib import style
 
 #User modules
 from dateModule import getTime
-#Functions
 
+#Functions
 def scrapeData(cryptoCurrency, currency):
     
     #Set the url
@@ -42,9 +42,7 @@ def writeData(btcValue, ethValue, time):
     
     #Open the file in append mode
     with open('cryptoValues.txt', 'a') as fileObject:
-        fileObject.write(data + ' ' + '\n')
-        print("Successfully written.")
-        
+        fileObject.write(data + ' ' + '\n')        
 
 def readData():
     btc, eth, time = [], [], []
@@ -67,35 +65,17 @@ def animate(i):
     timeX = allData[2]
     #Clear the axis before re-plotting
     ax1.clear()
-    plt.title('Bitcoin Value wrt Time (1MS) ')
-    plt.xlabel('1MS')
+    plt.title('Bitcoin Visualization ')
+    plt.xlabel('Time in mili-seconds (ms)')
     plt.ylabel('USD Price')
-    plt.legend(['Blue: Bitcoin, Red:Ethereum'], loc='upper left')
-    
     ax1.plot(btcY)
-    
-    
-def animateGraph(): #Possibly a new module
-    style.use('fivethirtyeight')
 
-    fig = plt.figure()
-    ax1 = fig.add_subplot(1,1,1)
-    ani = animation.FuncAnimation(fig, animate, interval=1000)
-    plt.show()
-
-
-
-
-
+#Animation works as a global function only. Hence this is called
+# as the default code
 style.use('fivethirtyeight')
 fig = plt.figure()
 ax1 = fig.add_subplot(1,1,1)
-plt.title('CHART OF ')
-plt.xlabel('time in milliseconds')
-plt.ylabel('price in ')
-plt.legend(['Blue: Bitcoin, Red:Ethereum'], loc='upper left')
-
-ani = animation.FuncAnimation(fig, animate, interval=100)
+ani = animation.FuncAnimation(fig, animate, interval=1000)
 plt.show()
     
 #Run the main function by default
