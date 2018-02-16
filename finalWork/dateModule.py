@@ -20,7 +20,7 @@ def getTime():
     
     #Make a string and return this.
     completeDate = str(currentDate) + " " +  str(currentTime)
-    print(completeDate)
+
     return completeDate
 
 

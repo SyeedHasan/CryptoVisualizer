@@ -75,7 +75,7 @@ def animate(i):
 style.use('fivethirtyeight')
 fig = plt.figure()
 ax1 = fig.add_subplot(1,1,1)
-ani = animation.FuncAnimation(fig, animate, interval=1000)
+ani = animation.FuncAnimation(fig, animate, interval=3000)
 plt.show()
     
 #Run the main function by default
