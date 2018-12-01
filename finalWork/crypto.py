@@ -1,4 +1,3 @@
-
 #Imported modules
 import requests
 import matplotlib.pyplot as plt
@@ -58,7 +57,7 @@ def readData():
 
     
 def animate(i):
-    scrapeData('BTC,ETH', 'USD')
+#    scrapeData('BTC,ETH', 'USD')
     allData = readData()
     btcY = allData[0]
     ethY = allData[1]
